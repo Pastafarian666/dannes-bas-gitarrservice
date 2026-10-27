@@ -95,6 +95,11 @@
   .about { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
   .about-img { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/5; position: relative; }
   .about-img img { width: 100%; height: 100%; object-fit: cover; }
+  .about-img figcaption {
+    position: absolute; inset: auto 0 0 0; padding: 48px 20px 18px; font-size: .9rem; line-height: 1.45;
+    background: linear-gradient(transparent, rgba(0,0,0,.85)); color: var(--text);
+  }
+  .about-img figcaption strong { display: block; font-family: Fraunces, serif; font-size: 1.05rem; font-weight: 600; }
   .about p { color: var(--muted); margin-bottom: 1rem; }
   .signature { margin-top: 1.5rem; font-family: Fraunces, serif; font-size: 1.3rem; color: var(--text); }
   .signature small { display: block; font-family: Inter, sans-serif; font-size: .85rem; color: var(--muted); }
@@ -241,9 +246,10 @@
 
   <section id="om">
     <div class="wrap about">
-      <div class="about-img reveal">
-        <img src="images/danne.webp" alt="Danne Lindell med en bas" loading="lazy">
-      </div>
+      <figure class="about-img reveal">
+        <img src="images/danne.webp" alt="Danne Lindell till vänster och Johan Johansson till höger, med en gitarr i verkstaden" loading="lazy">
+        <figcaption><strong>Danne &amp; Johan Johansson</strong>Johan, till höger i bild, är en av många nöjda kunder som låter Danne ta hand om sina instrument.</figcaption>
+      </figure>
       <div class="reveal">
         <span class="eyebrow">Om företaget</span>
         <h2>Personlig service, från en musiker</h2>
