@@ -118,6 +118,17 @@
   .price h3 { font-size: 1.15rem; font-family: Inter, sans-serif; font-weight: 600; color: var(--muted); margin-bottom: 12px; }
   .price .amount { font-family: Fraunces, serif; font-size: 2.4rem; font-weight: 700; }
   .price .amount small { font-size: 1rem; color: var(--muted); font-family: Inter, sans-serif; font-weight: 500; }
+  .setup-price { margin-top: 48px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 32px; align-items: center;
+                 background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(24px, 4vw, 40px); }
+  .setup-price h3 { font-size: 1.15rem; font-family: Inter, sans-serif; font-weight: 600; color: var(--muted); margin-bottom: 12px; }
+  .setup-price .amount { font-family: Fraunces, serif; font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 700; line-height: 1.1; }
+  .setup-price .amount small { font-size: 1rem; color: var(--muted); font-family: Inter, sans-serif; font-weight: 500; }
+  .sp-badge { display: inline-block; margin-top: 16px; padding: 6px 14px; border-radius: 999px; font-size: .9rem; font-weight: 600;
+              background: rgba(224,88,43,.14); color: var(--accent); }
+  .sp-instruments { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .sp-instruments li { padding: 16px 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg); }
+  .sp-instruments strong { display: block; font-weight: 600; }
+  .sp-instruments span { color: var(--muted); font-size: .88rem; }
   .price-list { margin-top: 24px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
   .price-list div { display: flex; justify-content: space-between; gap: 16px; padding: 18px 24px; }
   .price-list div + div { border-top: 1px solid var(--line); }
@@ -174,7 +185,7 @@
   /* Responsive */
   @media (max-width: 960px) {
     .grid-3, .prices-grid { grid-template-columns: 1fr 1fr; }
-    .about, .setup, .contact { grid-template-columns: 1fr; }
+    .about, .setup, .setup-price, .contact { grid-template-columns: 1fr; }
     .about-img { aspect-ratio: 4/3; }
   }
   @media (max-width: 720px) {
@@ -292,19 +303,26 @@
     <div class="wrap">
       <span class="eyebrow">Prisexempel</span>
       <h2>Tydliga priser</h2>
-      <p class="lead">Fullständig Set Up-Service, strängar ingår.</p>
+      <p class="lead">Samma prisbild för set up – oavsett instrument.</p>
 
-      <div class="prices-grid">
-        <div class="price reveal"><h3>Akustisk gitarr</h3><div class="amount">1 500 <small>kr</small></div></div>
-        <div class="price reveal"><h3>Elgitarr</h3><div class="amount">1 600 <small>kr</small></div></div>
-        <div class="price reveal"><h3>12-strängad gitarr</h3><div class="amount">1 700 <small>kr</small></div></div>
-        <div class="price reveal"><h3>Elbas (4-strängad)</h3><div class="amount">1 800 <small>kr</small></div></div>
+      <div class="setup-price reveal">
+        <div class="sp-main">
+          <h3>Fullständig Set Up-Service</h3>
+          <div class="amount">1 500–1 800 <small>kr</small></div>
+          <p class="sp-badge">✓ Strängar ingår</p>
+        </div>
+        <ul class="sp-instruments">
+          <li><strong>Akustisk gitarr</strong><span>6 strängar</span></li>
+          <li><strong>Elgitarr</strong><span>6 strängar</span></li>
+          <li><strong>12-strängad gitarr</strong><span>12 strängar</span></li>
+          <li><strong>Elbas</strong><span>4 strängar</span></li>
+        </ul>
       </div>
 
       <div class="price-list reveal">
         <div><span>Bandslip</span><span>ca 1 900 kr</span></div>
         <div><span>Nedtagning &amp; kröning av vassa bandändar</span><span>ca 900 kr</span></div>
-        <div><span>Byte &amp; inslipning av ny översadel</span><span>ca 400 kr + material</span></div>
+        <div><span>Byte &amp; inslipning av ny översadel</span><span>ca 1 400 kr + material</span></div>
         <div><span>Endast intonering <small style="color:var(--muted)">(förutsätter fräscha strängar)</small></span><span>400 kr</span></div>
         <div><span>Elektronikreparationer</span><span>500 kr/tim</span></div>
       </div>
